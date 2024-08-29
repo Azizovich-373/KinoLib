@@ -3,7 +3,6 @@ import { Header } from "./components/Header";
 import { Film } from "./components/Film";
 import { Triler } from "./components/Triler";
 import { Footer } from "./components/Fotter";
-import { compile } from "sass";
 
 const cont_header = document.querySelector('.header_place')
 const cont_footer = document.querySelector('.footer_place')
