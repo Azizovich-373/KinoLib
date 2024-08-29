@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Qanelas;
+}
+.hide{
+    display: none;
+}
+.active{
+    display: block;
+}
+button,
+p,
+a{
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    :hover{
+        transform: scale(1.05);
+    }
+}
+body{
+    background: #1E2538;
+    .container{
+        width: 1200px;
+        margin: 20px auto;
+        text-align: center;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            gap: 160px;
+            align-items: center;
+            margin-bottom: 50px;
+            nav{
+                display: flex;
+                gap: 15px;
+                justify-content: space-between;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 21.06px;
+                    text-align: left;
+                }
+                .search{
+                    width: 55px;
+                    height: 52px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    border: none;
+                }
+                .signin{
+                    width: 138px;
+                    height: 52px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #3657CB;
+                    color: #fff;
+                    box-shadow: 0px 0px 15px 0px #4871FFCC;
+                }
+            }
+        }
+        .in_kino{
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 86px;
+            h1{
+                font-family: Qanelas;
+                font-size: 65px;
+                font-weight: 900;
+                line-height: 82.81px;
+                text-align: left;
+                color: #fff;
+            }
+            .cats{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                color: #fff;
+                font-family: Qanelas;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22.3px;
+                text-align: left;
+            }
+        }
+        .view_all_play,
+        .hide_all_play{
+            width: 200px;
+            height: 71px;
+            border-radius: 10px;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            margin-top: 50px;
+            background-color: #1E2538;
+        }
+        .films,
+        .top_place,
+        .uncomming_place{
+            width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 22px;
+            transition: all .5s ease;
+            .film{
+                width: 280px;
+                height: 450px;
+                transition: transform 0.5s ease-in-out;
+                :hover{
+                    transform: scale(1.05);
+                }
+                .img_film{
+                    background-color: #fff;
+                    height: 400px;
+                    width: 280px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-bottom: 10px;
+                    transition: transform 0.5s ease-in-out;
+                    position: relative;
+                    :hover{
+                        transform: scale(1.05);
+                    }
+                    .ratting{
+                        width: 50px;
+                        height: 20px;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        background-color: green;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 3px;
+                    }
+                }
+                .name_film{
+                    font-family: Qanelas;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22.3px;
+                    text-align: left;
+                    color: #fff;
+                }
+                .genre_film{
+                    font-family: Qanelas;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 17.85px;
+                    text-align: left;
+                    color: #F2F60F;
+                }
+            }
+            
+        }
+        .trilers{
+            margin-top: 50px;
+            .title_triles{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+                h1{
+                    font-family: Qanelas;
+                    font-size: 65px;
+                    font-weight: 900;
+                    line-height: 82.81px;
+                    text-align: left;
+                    color: #fff;
+                }
+                h2{
+                    font-family: Qanelas;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 27.26px;
+                    text-align: left;
+                    color: #fff;
+                }
+            }
+            .triler_place{
+                width: 1200px;
+                min-height: 765px;
+                background-color: #fff;
+                border-radius: 10px;
+                margin-top: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .triler_desc{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                p{
+                    font-family: Qanelas;
+                    font-size: 45px;
+                    font-weight: 900;
+                    line-height: 57.33px;
+                    text-align: left;
+                    color: #fff;
+                }
+                .emojes{
+                    max-width: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    div{
+                        width: 45px;
+                        height: 45px;
+                        background-color: #1B2133;
+                        justify-content: center;
+                        display: flex;
+                        padding: 10px;
+                    }
+                    span{
+                        color: #fff;
+                        font-family: Qanelas;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 17.85px;
+                        text-align: left;
+                        padding: 10px;
+                    }
+                }
+            }
+            .select_triler{
+                margin-top: 20px;
+                width: 1200px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                .triler{
+                    width: 280px;
+                    height: 230px;
+                    text-align: left;
+                    border-radius: 10px;
+                    .triler_img{
+                        width: 280px;
+                        height: 220px;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .triler_title{
+                        font-family: Qanelas;
+                        font-size: 19px;
+                        font-weight: 900;
+                        line-height: 25.48px;
+                        text-align: left;
+                        margin-top: 5px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .top_films{
+            margin-top: 70px;
+            text-align: center;
+            .select_pages{
+                margin-top: 20px;
+                font-family: Qanelas;
+                font-size: 19px;
+                font-weight: 900;
+                line-height: 25.48px;
+                margin-top: 5px;
+                color: #fff;
+                align-items: center;
+            }
+        }
+        .upcomming{
+            margin-top: 50px;
+            .in_kino{
+                .select_pages{
+                    margin-top: 20px;
+                    font-family: Qanelas;
+                    font-size: 19px;
+                    font-weight: 900;
+                    line-height: 25.48px;
+                    margin-top: 5px;
+                    color: #fff;
+                    align-items: center;
+                }
+            }
+        }
+        .footer_place{
+            width: 1200px;
+            margin-top: 100px;
+            .footer{
+                width: 1200px;
+                .box_fon{
+                    width: 1200px;
+                    background-image: url(fon.svg);
+                    .box{
+                        background-color: #1D3AA0E5;
+                        width: 1200px;
+                        height: 500px;
+                        padding: 50px;
+                        h2{
+                            font-family: Qanelas;
+                            font-size: 50px;
+                            font-weight: 900;
+                            line-height: 63.7px;
+                            text-align: center;
+                            margin-top: 50px;
+                            color: #fff;
+                        }
+                        h3,
+                        h6{
+                            font-family: Qanelas;
+                            font-size: 22px;
+                            font-weight: 500;
+                            line-height: 30.84px;
+                            text-align: center;
+                            margin-top: 20px;
+                            color: #fff;
+                        }
+                        input{
+                            width: 400px;
+                            height: 50px;
+                            background-color: #fff;
+                            padding: 20px;
+                            color: #151A2699;
+                            font-family: Qanelas;
+                            font-size: 17px;
+                            font-weight: 400;
+                            line-height: 28.31px;
+                            text-align: left;
+                            border: none;
+                            border-radius: 10px;
+                            margin-top: 20px;
+                        }
+                        button{
+                            width: 160px;
+                            height: 50px;
+                            background-color: #F2F60F;
+                            color: black;
+                            border: none;
+                            border-radius: 10px;
+                        }
+                    }
+                    
+                }
+                .cats{
+                    width: 600px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+                    color: #fff;
+                    font-family: Qanelas;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 22.3px;
+                    margin: 100px auto;
+                }
+                h4,
+                h5{
+                    font-family: Qanelas;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 17.85px;
+                    text-align: center;
+                    color: #E3E6F0B8;
+                }
+            }
+        }
+    }
+}
