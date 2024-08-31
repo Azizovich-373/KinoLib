@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="media.css">
     <title>KinoLib</title>
 </head>
 
@@ -15,6 +16,7 @@
         <div class="in_kino">
             <h1>Сейчас в кино</h1>
             <img src="/line1.svg" alt="">
+            <img class="burger" src="/burger.svg" alt="">
             <div class="cats">
                 <p>Все</p>
                 <p>Боевики</p>
@@ -34,7 +36,9 @@
                 <h1>Новые трейлеры</h1>
                 <h2>Все трейлеры<img src="/right.svg" alt=""></h2>
             </div>
-            <div class="triler_place"></div>
+            <div class="triler_place">
+                <iframe border-radius="10px" width="100%" height="765px" frameborder="0"></iframe>
+            </div>
             <div class="triler_desc">
                 <p id="title_triler">TITLE</p>
                 <div class="emojes">
@@ -64,20 +68,20 @@
             </div>
             <div class="top_place"></div>
             <div class="select_pages">
-                <img src="/select_left.svg" alt="">
-                <span>4</span>
-                <span>/10</span>
-                <img src="/select_right.svg" alt="">
+                <img class="prev_top" src="/select_left.svg" alt="">
+                <span class="count_top">1</span>
+                <span class="all_top">/20</span>
+                <img class="next_top" src="/select_right.svg" alt="">
             </div>
         </section>
         <section class="upcomming">
-            <div class="in_kino">
+            <div class="up_films">
                 <h1>Ожидаемые новинки</h1>
                 <div class="select_pages">
-                    <img src="/select_left.svg" alt="">
-                    <span>1</span>
+                    <img class="prev_up" src="/select_left.svg" alt="">
+                    <span class="count_up">1</span>
                     <span>/10</span>
-                    <img src="/select_right.svg" alt="">
+                    <img class="next_up" src="/select_right.svg" alt="">
                 </div>
             </div>
             <div class="uncomming_place">

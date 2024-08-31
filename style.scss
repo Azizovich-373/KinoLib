@@ -4,6 +4,21 @@
     box-sizing: border-box;
     font-family: Qanelas;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #1B2133;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1B2138;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:  #1E2538;
+}
 .hide{
     display: none;
 }
@@ -19,54 +34,98 @@ a{
         transform: scale(1.05);
     }
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+nav{
+    display: flex;
+    gap: 15px;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.logo-container img {
+    width: 150px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21.06px;
+    text-align: left;
+}
+.search{
+    width: 55px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+.menu{
+    width: 55px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    display: none;  
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+.titles_header{
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+.signin{
+    width: 138px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3657CB;
+    color: #fff;
+    box-shadow: 0px 0px 15px 0px #4871FFCC;
+}
+iframe{
+    @media (max-width: 1300px) {
+        height: 600px;
+    }
+    @media (max-width: 1200px) {
+        height: 400px;
+    }
+}
 body{
     background: #1E2538;
     .container{
-        width: 1200px;
+        width: 80%;
         margin: 20px auto;
-        text-align: center;
-        .header{
-            display: flex;
-            justify-content: space-between;
-            gap: 160px;
-            align-items: center;
-            margin-bottom: 50px;
-            nav{
-                display: flex;
-                gap: 15px;
-                justify-content: space-between;
-                a{
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 17px;
-                    font-weight: 700;
-                    line-height: 21.06px;
-                    text-align: left;
-                }
-                .search{
-                    width: 55px;
-                    height: 52px;
-                    background-color: #fff;
-                    border-radius: 10px;
-                    border: none;
-                }
-                .signin{
-                    width: 138px;
-                    height: 52px;
-                    border-radius: 10px;
-                    border: none;
-                    background-color: #3657CB;
-                    color: #fff;
-                    box-shadow: 0px 0px 15px 0px #4871FFCC;
-                }
-            }
+        text-align: center; 
+        @media (max-width: 1200px) {
+            width: 650px;
+            margin: 0 auto;
         }
         .in_kino{
-            width: 1200px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 86px;
+            @media (max-width: 1300px) {
+                display: block;
+            }
+            @media (max-width: 1200px) {
+                display: flex;
+                width: 500px;
+                margin: 0 auto;
+            }
             h1{
                 font-family: Qanelas;
                 font-size: 65px;
@@ -74,17 +133,37 @@ body{
                 line-height: 82.81px;
                 text-align: left;
                 color: #fff;
+                @media (max-width: 1200px) {
+                    font-size: 32px;
+                }
+            }
+            img{
+                @media (max-width: 1300px) {
+                    display: none;
+                }
+            }
+            .burger{
+                @media (max-width: 1200px) {
+                    display: block;
+                }
             }
             .cats{
+                width: 350px;
                 display: flex;
-                justify-content: space-between;
-                gap: 10px;
+                gap: 20px;
                 color: #fff;
                 font-family: Qanelas;
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 22.3px;
                 text-align: left;
+                overflow-x: scroll;
+                @media (max-width: 1300px) {
+                    width: 100%;
+                }
+                @media (max-width: 1200px) {
+                    display: none;
+                }
             }
         }
         .view_all_play,
@@ -100,15 +179,42 @@ body{
         .films,
         .top_place,
         .uncomming_place{
-            width: 1200px;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 22px;
             transition: all .5s ease;
+            @media (max-width: 1400px) {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 10;
+            }
+            @media (max-width: 1300px) {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 10;
+            }
+            @media (max-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 5;
+            }
             .film{
                 width: 280px;
                 height: 450px;
                 transition: transform 0.5s ease-in-out;
+                @media (max-width: 1400px) {
+                    width: 260px;
+                    height: 430px;
+                }
+                @media (max-width: 1300px) {
+                    width: 300px;
+                    height: 430px;
+                }
+                @media (max-width: 1200px) {
+                    width: 300px;
+                    height: 400px;
+                }
                 :hover{
                     transform: scale(1.05);
                 }
@@ -122,6 +228,18 @@ body{
                     margin-bottom: 10px;
                     transition: transform 0.5s ease-in-out;
                     position: relative;
+                    @media (max-width: 1400px) {
+                        width: 260px;
+                        height: 400px;
+                    }
+                    @media (max-width: 1300px) {
+                        width: 300px;
+                        height: 350px;
+                    }
+                    @media (max-width: 1200px) {
+                        width: 300px;
+                        height: 350px;
+                    }
                     :hover{
                         transform: scale(1.05);
                     }
@@ -170,6 +288,9 @@ body{
                     line-height: 82.81px;
                     text-align: left;
                     color: #fff;
+                    @media (max-width: 1200px) {
+                        font-size: 25px;
+                    }
                 }
                 h2{
                     font-family: Qanelas;
@@ -178,17 +299,24 @@ body{
                     line-height: 27.26px;
                     text-align: left;
                     color: #fff;
+
                 }
             }
             .triler_place{
-                width: 1200px;
-                min-height: 765px;
-                background-color: #fff;
+                width: 100%;
+                height: 765px;
+                background-color: #1B2138;
                 border-radius: 10px;
                 margin-top: 30px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
+                @media (max-width: 1300px) {
+                    height: 600px;
+                }
+                @media (max-width: 1200px) {
+                    height: 400px;
+                }
             }
             .triler_desc{
                 display: flex;
@@ -202,6 +330,9 @@ body{
                     line-height: 57.33px;
                     text-align: left;
                     color: #fff;
+                    @media (max-width: 1200px) {
+                        font-size: 25px;
+                    }
                 }
                 .emojes{
                     max-width: 100px;
@@ -231,15 +362,20 @@ body{
             }
             .select_triler{
                 margin-top: 20px;
-                width: 1200px;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-                gap: 10px;
+                gap: 20px;
+                height: 300px;
+                overflow-x: scroll;
+                overflow-y: hidden;
                 .triler{
                     width: 280px;
                     height: 230px;
                     text-align: left;
                     border-radius: 10px;
+                    transition: transform 0.5s ease-in-out;
+                    
                     .triler_img{
                         width: 280px;
                         height: 220px;
@@ -259,13 +395,18 @@ body{
                         color: #fff;
                     }
                 }
+
+                .triler:hover{
+                    transform: scale(1.05);
+                    border-radius: 15px;
+                }
             }
         }
         .top_films{
             margin-top: 70px;
             text-align: center;
             .select_pages{
-                margin-top: 20px;
+                padding-top: 30px;
                 font-family: Qanelas;
                 font-size: 19px;
                 font-weight: 900;
@@ -277,7 +418,26 @@ body{
         }
         .upcomming{
             margin-top: 50px;
-            .in_kino{
+            width: 100%;
+            .up_films{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 86px;
+                @media (max-width: 1200px) {
+                    margin-bottom: 10px;
+                }  
+                h1{
+                    font-family: Qanelas;
+                    font-size: 65px;
+                    font-weight: 900;
+                    line-height: 82.81px;
+                    text-align: left;
+                    color: #fff;
+                    @media (max-width: 1200px) {
+                        font-size: 25px;
+                    }   
+                }
                 .select_pages{
                     margin-top: 20px;
                     font-family: Qanelas;
@@ -291,17 +451,20 @@ body{
             }
         }
         .footer_place{
-            width: 1200px;
+            width: 100%;
             margin-top: 100px;
             .footer{
-                width: 1200px;
+                width: 100%;
+                padding-top: 20px;
                 .box_fon{
-                    width: 1200px;
+                    width: 100%;
                     background-image: url(fon.svg);
                     .box{
+                        @media (max-width: 1200px) {
+                            flex-direction: column;
+                        }
                         background-color: #1D3AA0E5;
-                        width: 1200px;
-                        height: 500px;
+                        width: 100%;
                         padding: 50px;
                         h2{
                             font-family: Qanelas;
@@ -312,6 +475,9 @@ body{
                             margin-top: 50px;
                             color: #fff;
                         }
+                        @media (max-width: 1200px) {
+                            font-size: 25px;
+                        }
                         h3,
                         h6{
                             font-family: Qanelas;
@@ -321,6 +487,9 @@ body{
                             text-align: center;
                             margin-top: 20px;
                             color: #fff;
+                        }
+                        @media (max-width: 1200px) {
+                            font-size: 15px;
                         }
                         input{
                             width: 400px;
@@ -344,6 +513,10 @@ body{
                             color: black;
                             border: none;
                             border-radius: 10px;
+                            @media (max-width: 1200px) {
+                                width: 400px;
+                                margin-top: 10px;
+                            }
                         }
                     }
                     
@@ -358,7 +531,10 @@ body{
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 22.3px;
-                    margin: 100px auto;
+                    margin: 50px auto;
+                    @media (max-width: 1200px) {
+                        flex-direction: column;
+                    }
                 }
                 h4,
                 h5{
