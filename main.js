@@ -51,7 +51,7 @@ await apiCall.getData('/top_rated?language=en-US&page=1')
 let current_up = +(count_up.innerHTML)
 
 next_up.onclick = async () => {
-    if (current_up < 20) {
+    if (current_up < 10) {
         current_up++
         count_up.innerHTML = current_up.toString()
         Upcomming(current_up)
