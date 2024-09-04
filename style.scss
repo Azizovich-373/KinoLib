@@ -45,14 +45,118 @@ nav{
     display: flex;
     gap: 15px;
 }
-.logo-container {
+.center{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    .center_logo{
+        margin: 0 auto;
+    }
 }
-.logo-container img {
-    width: 150px;
+.search_left,
+.center_logo{
+    display: none;
+    @media (max-width: 1400px) {
+        display: block;
+    }
+}
+.genres{
+    display: flex;
+    gap: 10px;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+.swiper-wrapper {
+    margin: 50px;
+    .film {
+        width: 300px;
+        height: 450px;
+        transition: transform 0.5s ease-in-out;
+        @media (max-width: 1400px) {
+            width: 260px;
+            height: 430px;
+        }
+        @media (max-width: 1300px) {
+            width: 300px;
+            height: 430px;
+        }
+        @media (max-width: 1200px) {
+            width: 300px;
+            height: 400px;
+        }
+        :hover {
+            transform: scale(1.05);
+        }
+        .img_film {
+            background-color: #fff;
+            height: 400px;
+            width: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
+            @media (max-width: 1400px) {
+                width: 260px;
+                height: 400px;
+            }
+            @media (max-width: 1300px) {
+                width: 300px;
+                height: 350px;
+            }
+            @media (max-width: 1200px) {
+                width: 300px;
+                height: 350px;
+            }
+            :hover {
+                transform: scale(1.05);
+            }
+            .ratting {
+                width: 50px;
+                height: 20px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background-color: green;
+                text-align: center;
+                color: #fff;
+                border-radius: 3px;
+            }
+
+            .cont_img {
+                position: relative;
+
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: #3657CBA6;
+                }
+            }
+        }    
+        .name_film {
+            font-family: 'Qanelas', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.3px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .genre_film {
+            font-family: 'Qanelas', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 17.85px;
+            text-align: left;
+            color: #F2F60F;
+        }
+    }
+}
+.search,
+.logo{
+    @media (max-width: 1400px) {
+        display: none;
+    }
 }
 a{
     color: #fff;
@@ -62,7 +166,9 @@ a{
     line-height: 21.06px;
     text-align: left;
 }
-.search{
+.search,
+.search_left,
+.menu{
     width: 55px;
     height: 52px;
     background-color: #fff;
@@ -70,19 +176,9 @@ a{
     border: none;
 }
 .menu{
-    width: 55px;
-    height: 52px;
-    background-color: #fff;
-    border-radius: 10px;
-    border: none;
-    display: none;  
+    display: none; 
     @media (max-width: 1200px) {
         display: block;
-    }
-}
-.titles_header{
-    @media (max-width: 1200px) {
-        display: none;
     }
 }
 .signin{
@@ -178,8 +274,9 @@ body{
             background-color: #1E2538;
         }
         .films,
-        .top_place,
-        .uncomming_place{
+        .poster_place,
+        .cadr_place,
+        .sickvel_place{
             width: 100%;
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -220,7 +317,7 @@ body{
                     transform: scale(1.05);
                 }
                 .img_film{
-                    background-color: #fff;
+                    background-color: transparent;
                     height: 400px;
                     width: 280px;
                     background-position: center;
@@ -255,6 +352,12 @@ body{
                         color: #fff;
                         border-radius: 3px;
                     }
+                    .cont_img{
+                        background-color: transparent;
+                        :hover{
+                            background-color: #3657CBA6;
+                        }
+                    }
                 }
                 .name_film{
                     font-family: Qanelas;
@@ -275,9 +378,15 @@ body{
             }
             
         }
-        .trilers{
+        .trilers,
+        .posters,
+        .cadrs,
+        .sickvel{
             margin-top: 50px;
-            .title_triles{
+            .title_triles,
+            .title_poster,
+            .title_cadrs,
+            .title_sickvel{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
