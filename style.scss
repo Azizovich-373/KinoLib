@@ -273,6 +273,80 @@ body{
             margin-top: 50px;
             background-color: #1E2538;
         }
+        .actor_place{
+            display: grid;
+            width: 100%;
+            gap: 22px;
+            grid-template-columns: repeat(5,1fr);
+            .actor{
+                width: 220px;
+                height: 280px;
+                transition: transform 0.5s ease-in-out;
+                // @media (max-width: 1400px) {
+                //     width: 260px;
+                //     height: 430px;
+                // }
+                // @media (max-width: 1300px) {
+                //     width: 300px;
+                //     height: 430px;
+                // }
+                // @media (max-width: 1200px) {
+                //     width: 300px;
+                //     height: 400px;
+                // }
+                :hover{
+                    transform: scale(1.05);
+                }
+                .img_actor{
+                    background-color: transparent;
+                    height: 250px;
+                    width: 220px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-bottom: 10px;
+                    transition: transform 0.5s ease-in-out;
+                    position: relative;
+                    // @media (max-width: 1400px) {
+                    //     width: 260px;
+                    //     height: 400px;
+                    // }
+                    // @media (max-width: 1300px) {
+                    //     width: 300px;
+                    //     height: 350px;
+                    // }
+                    // @media (max-width: 1200px) {
+                    //     width: 300px;
+                    //     height: 350px;
+                    // }
+                    :hover{
+                        transform: scale(1.05);
+                    }
+                    .cont_img{
+                        background-color: transparent;
+                        :hover{
+                            background-color: #3657CBA6;
+                        }
+                    }
+                }
+                .name_actor{
+                    font-family: Qanelas;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22.3px;
+                    text-align: left;
+                    color: #fff;
+                }
+                .genre_actor{
+                    font-family: Qanelas;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 17.85px;
+                    text-align: left;
+                    color: #F2F60F;
+                }
+            }
+        }
         .films,
         .poster_place,
         .cadr_place,
@@ -381,12 +455,16 @@ body{
         .trilers,
         .posters,
         .cadrs,
-        .sickvel{
+        .sickvel,
+        .similar,
+        .actors{
             margin-top: 50px;
             .title_triles,
             .title_poster,
             .title_cadrs,
-            .title_sickvel{
+            .title_sickvel,
+            .title_similar,
+            .title_actors{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -396,7 +474,6 @@ body{
                     font-size: 65px;
                     font-weight: 900;
                     line-height: 82.81px;
-                    text-align: left;
                     color: #fff;
                     @media (max-width: 1200px) {
                         font-size: 25px;
