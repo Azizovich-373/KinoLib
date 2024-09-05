@@ -26,6 +26,8 @@ const iframe = document.querySelector('.triler_place iframe')
 const videos = await apiCall.getData(`/${id}/videos`);
 const finded = videos.results.find(item => item.type === "Trailer")
 
+reload([{}], cont_header, Header)
+reload([{}], cont_footer, Footer)
 iframe.src = `https://www.youtube.com/embed/${finded.key}`
 title.innerHTML = item.title
 new Swiper('.sickvel .swiper', {
@@ -76,5 +78,3 @@ const similar = await apiCall.getData(`/${id}/similar`)
     .then(res => {
         reload(res.results, similar_place, Film)
     })
-reload([{}], cont_header, Header);
-reload([{}], cont_footer, Footer)
